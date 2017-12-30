@@ -767,4 +767,11 @@ exe "hi! mkdRule" .s:hl_special("reverse")
 " なぞ
 call s:h_link("_Unknown", "markdownUrl", "mkdIndentCode0", "mkdIndentCode1", "mkdIndentCode2", "mkdFrontmatterDelimiter", "mkdString", "mkdMath", "mkdURLDelimiter")
 " ++ }}}
+" ++ toml {{{
+hi! link tomlString _String
+hi! link tomlComment _Comment
+exe "hi! tomlTableArray" .s:fg_col9
+exe "hi! tomlLabel" .s:fg_col6
+call s:h_link("_Unknown", "tomlEscape", "tomlLineEscape", "tomlInteger", "tomlFloat", "tomlBoolean", "tomlDate", "tomlTable", "tomlTodo")
+" ++ }}}
 " + }}}
