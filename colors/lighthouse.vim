@@ -18,7 +18,7 @@ let g:colors_name = 'lighthouse'
 
 if has("gui_running") || has('gui') || has('nvim')
     let s:vmode       = "gui"
-    let s:col0        = "#191926" "黒
+    let s:col0        = "#191925" "黒
     let s:col1        = "#303442"
     let s:col2        = "#515960"
     let s:col3        = "#c4cbd2"
@@ -86,7 +86,6 @@ endfunction
 "}}}
 
 " + グループ化 {{{
-exe "hi! _Normal" .s:fg_col4
 exe "hi! _Comment" .s:fg_col5
 exe "hi! _Value" .s:fg_col10
 exe "hi! _String" .s:fg_col12
@@ -99,7 +98,7 @@ exe "hi! _Unknown" .s:bg_col("#990000")
 " + 基本の設定 {{{
 
 " 固定のもの
-hi! link Normal _Normal
+exe "hi! Normal" .s:fg_col4 .s:bg_col0
 exe "hi! NonText" .s:bg_col1 .s:fg_col14
 hi! link SpecialKey _Unknown
 exe "hi! Operator" .s:fg_col4
@@ -159,78 +158,78 @@ hi link ZenkakuSpace Error
 
 " + filetype毎のhighlight {{{
 " ++ css {{{
-" +++ _Normal {{{
-hi! link cssStyle _Normal
+" +++ Normal {{{
+hi! link cssStyle Normal
 " propety: some; <-- : ;"
-hi! link cssNoise _Normal
+hi! link cssNoise Normal
 " selector{ } <-- { }"
-hi! link cssBraces _Normal
+hi! link cssBraces Normal
 " scale(x,y) <-- , "
-hi! link cssFunctionComma _Normal
+hi! link cssFunctionComma Normal
 " #ff0000 red <-- ff0000 red "
-hi! link cssColor _Normal
+hi! link cssColor Normal
 " rect(0px auto, auto auto) <-- \s auto"
-hi! link cssFunction _Normal
+hi! link cssFunction Normal
 " propety: some <-- \s % "
-hi! link cssAttrRegion _Normal
+hi! link cssAttrRegion Normal
 " none "
-hi! link cssCommonAttr _Normal
+hi! link cssCommonAttr Normal
 " url(some) <-- url( )"
-hi! link cssFunctionName _Normal
+hi! link cssFunctionName Normal
 " linear-gradient(left, #fff, rgba(255,0,0,0) <-- left "
-hi! link cssGradientAttr _Normal
+hi! link cssGradientAttr Normal
 " background: #fff url(some) top center no-repeat <-- top center no-repeat; "
-hi! link cssBackgroundAttr _Normal
+hi! link cssBackgroundAttr Normal
 " border:solid 1px #fff; <-- solid "
-hi! link cssBorderAttr _Normal
+hi! link cssBorderAttr Normal
 " margin: auto; overflow: hidden "
-hi! link cssBoxAttr _Normal
+hi! link cssBoxAttr Normal
 " font-family: Arial <-- Arial "
-hi! link cssFontAttr _Normal
+hi! link cssFontAttr Normal
 " #FF0000 10px 2em 3Hz <-- # px em Hz"
-hi! link cssUnitDecorators _Normal
+hi! link cssUnitDecorators Normal
 " @media (orientation: landscape){} <-- landscape"
-hi! link cssMediaAttr _Normal
+hi! link cssMediaAttr Normal
 " @media screen, print <-- , "
-hi! link cssMediaComma _Normal
+hi! link cssMediaComma Normal
 " @media screen and (max-width:480px) <-- \s : ( ) "
-hi! link cssInclude _Normal
+hi! link cssInclude Normal
 " break-after:column; <-- column "
-hi! link cssMultiColumnAttr _Normal
+hi! link cssMultiColumnAttr Normal
 " animation-iteration-count: infinite; <-- infinite "
-hi! link cssAnimationAttr _Normal
+hi! link cssAnimationAttr Normal
 " list-style: square url('../images/ico32.gif') inside <-- insize squeare"
-hi! link cssListAttr _Normal
+hi! link cssListAttr Normal
 " display:block; position:absolute; float:left <-- block absolute left "
-hi! link cssPositioningAttr _Normal
+hi! link cssPositioningAttr Normal
 " page-break-inside: avoid; size:landscape; <-- avoid landscape "
-hi! link cssPrintAttr _Normal
+hi! link cssPrintAttr Normal
 " page-break-before: always; <-- always "
-hi! link cssTableAttr _Normal
+hi! link cssTableAttr Normal
 " frex-wrap:nowrap; word-break:break-all; text-decoration:underline <-- nowrap break-all underline "
-hi! link cssTextAttr _Normal
+hi! link cssTextAttr Normal
 " transition : width 1s ease-out; transition:1s linear <-- ease-out linear "
-hi! link cssTransitionAttr _Normal
+hi! link cssTransitionAttr Normal
 " content:some; zoom:1; cursor:pointer; <-- content zoom pointer "
-hi! link cssUIAttr _Normal
+hi! link cssUIAttr Normal
 " interpolation-mode:bicubic <-- bicubic "
-hi! link cssIEUIAttr _Normal
+hi! link cssIEUIAttr Normal
 " voice-family:male; <-- male"
-hi! link cssAuralAttr _Normal
+hi! link cssAuralAttr Normal
 " , "
-hi! link cssAttrComma _Normal
+hi! link cssAttrComma Normal
 " #aaa + .bbb > .test <-- + >  "
-hi! link cssSelectorOp _Normal
+hi! link cssSelectorOp Normal
 " input[type=radio] <-- = "
-hi! link cssSelectorOp2 _Normal
+hi! link cssSelectorOp2 Normal
 " @media screen and (min-width:480px) <-- and "
-hi! link cssMediaKeyword _Normal
+hi! link cssMediaKeyword Normal
 " :lang(en) :lang(no) <-- en no "
-hi! link cssPseudoClassFn _Normal
+hi! link cssPseudoClassFn Normal
 " @media screen and print <-- screen print all "
-hi! link cssMediaType _Normal
+hi! link cssMediaType Normal
 " @keyframes some { 0% {} 30%{} } <-- 0% 30% "
-hi! link cssKeyFrameSelector _Normal
+hi! link cssKeyFrameSelector Normal
 "z-index:2; line-height:1; <-- 2 1 (IntegerはNumberでもあるのでNumberが優先される
 " +++ }}}
 " +++ _Value {{{
@@ -357,49 +356,49 @@ call s:h_link("_Unknown", "cssMediaBlock", "cssError", "cssDefinition", "cssPage
       \ "cssRubyAttr", "cssSpeechAttr", "cssTransformAttr", "cssRenderAttr", "cssPseudoClassLang")
 " ++ }}}
 " ++ ruby {{{
-" +++ _Normal {{{
+" +++ Normal {{{
 " 3.times do |here| <-- here "
-hi! link rubyBlockParameter _Normal
+hi! link rubyBlockParameter Normal
 " #{ here } <-- here"
-hi! link rubyInterpolation _Normal
+hi! link rubyInterpolation Normal
 " class Class <-- \s = "
-hi! link rubyBlock _Normal
+hi! link rubyBlock Normal
 " { nm => '', val => ''} {|nm| here } <-- , \s here"
-hi! link rubyCurlyBlock _Normal
+hi! link rubyCurlyBlock Normal
 " def here(name) <-- here "
-hi! link rubyFunction _Normal
+hi! link rubyFunction Normal
 " def method(some) <-- (some) \s "
-hi! link rubyMethodBlock _Normal
+hi! link rubyMethodBlock Normal
 " some =   some >  "
-hi! link rubyDoBlock _Normal
+hi! link rubyDoBlock Normal
 " begin some_all end <-- some_all "
-hi! link rubyBlockExpression _Normal
+hi! link rubyBlockExpression Normal
 " case here when 1 end <-- here \s "
-hi! link rubyCaseExpression _Normal
+hi! link rubyCaseExpression Normal
 " [ 1, 2, 3] <-- , "
-hi! link rubyArrayLiteral _Normal
+hi! link rubyArrayLiteral Normal
 " if here else here end <-- here \s "
-hi! link rubyConditionalExpression _Normal
+hi! link rubyConditionalExpression Normal
 " for here in here do <-- here \s "
-hi! link rubyOptionalDoLine _Normal
+hi! link rubyOptionalDoLine Normal
 " while true here end <-- here \s "
-hi! link rubyRepeatExpression _Normal
+hi! link rubyRepeatExpression Normal
 " 3.times do |some, some2| <-- | , |"
-hi! link rubyBlockParameterList _Normal
+hi! link rubyBlockParameterList Normal
 " [ 1, 2, 3] <-- [ ] "
-hi! link rubyArrayDelimiter _Normal
+hi! link rubyArrayDelimiter Normal
 " some = { name => '' , val => '' } <-- { } "
-hi! link rubyCurlyBlockDelimiter _Normal
+hi! link rubyCurlyBlockDelimiter Normal
 " Class.method <-- . "
-hi! link rubyMethodDeclaration _Normal
+hi! link rubyMethodDeclaration Normal
 " Class::Method <- ::
-hi! link rubyClassDeclaration _Normal
+hi! link rubyClassDeclaration Normal
 " Module::Method <- ::
-hi! link rubyModuleDeclaration _Normal
+hi! link rubyModuleDeclaration Normal
 " eval(some) <-- eval"
-hi! link rubyEval _Normal
+hi! link rubyEval Normal
 " defined?(some) <-- defined?
-hi! link rubyOperator _Normal
+hi! link rubyOperator Normal
 " +++ }}}
 " +++ _String {{{
 " :some "
@@ -514,19 +513,19 @@ call s:h_link("_Unknown", "rubySymbolDelimiter", "rubyHeredocStart", "rubyHeredo
       \ "rubyDataDirective", "rubyData", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError")
 " ++ }}}
 " ++ javascript {{{
-" +++ _Normal {{{
-hi! link javaScript _Normal
+" +++ Normal {{{
+hi! link javaScript Normal
 " { } "dd
-hi! link javaScriptBraces _Normal
+hi! link javaScriptBraces Normal
 
 " alert() confirm() <-- alert confirm "
-hi! link javaScriptMessage _Normal
+hi! link javaScriptMessage Normal
 " window "
-hi! link javaScriptGlobal _Normal
+hi! link javaScriptGlobal Normal
 " document "
-hi! link javaScriptMember _Normal
+hi! link javaScriptMember Normal
 " if() function() <-- ( ) "
-hi! link javaScriptParens _Normal
+hi! link javaScriptParens Normal
 " +++ }}}
 " +++ _Comment {{{
 " //some "
@@ -581,28 +580,28 @@ call s:h_link("_Unknown", "javaScriptRailsFunction", "javaScriptTemplateVar", "j
       \ "javaScriptReserved", "javaScriptCharacter", "javaScriptError", "javaScrParenError", "javaScriptDebug", "javaScriptConstant", "javaScriptExpression")
 " }}}
 " ++ html {{{
-" +++ _Normal {{{
+" +++ Normal {{{
 " onclick="method(aa,bb)" <-- onclick="method ,
-hi! link htmlEvent _Normal
+hi! link htmlEvent Normal
 " <a href="aaa">here</a> <-- here
-hi! link htmlLink _Normal
-hi! link htmlLeadingSpace _Normal
-hi! link htmlTitle _Normal
-hi! link htmlBoldUnderline _Normal
-hi! link htmlBoldItalic _Normal
-hi! link htmlBold _Normal
-hi! link htmlBoldUnderlineItalic _Normal
-hi! link htmlBoldItalicUnderline _Normal
-hi! link htmlUnderlineBold _Normal
-hi! link htmlUnderlineItalic _Normal
-hi! link htmlUnderline _Normal
-hi! link htmlUnderlineBoldItalic _Normal
-hi! link htmlUnderlineItalicBold _Normal
-hi! link htmlItalicBold _Normal
-hi! link htmlItalicUnderline _Normal
-hi! link htmlItalic _Normal
-hi! link htmlItalicBoldUnderline _Normal
-hi! link htmlItalicUnderlineBold _Normal
+hi! link htmlLink Normal
+hi! link htmlLeadingSpace Normal
+hi! link htmlTitle Normal
+hi! link htmlBoldUnderline Normal
+hi! link htmlBoldItalic Normal
+hi! link htmlBold Normal
+hi! link htmlBoldUnderlineItalic Normal
+hi! link htmlBoldItalicUnderline Normal
+hi! link htmlUnderlineBold Normal
+hi! link htmlUnderlineItalic Normal
+hi! link htmlUnderline Normal
+hi! link htmlUnderlineBoldItalic Normal
+hi! link htmlUnderlineItalicBold Normal
+hi! link htmlItalicBold Normal
+hi! link htmlItalicUnderline Normal
+hi! link htmlItalic Normal
+hi! link htmlItalicBoldUnderline Normal
+hi! link htmlItalicUnderlineBold Normal
 " +++ }}}
 " +++ _Comment {{{
 " <!-- comment --> <-- -- comment --
@@ -670,12 +669,12 @@ call s:h_link("_Unknown", "htmlPreStmt", "htmlPreError", "htmlPreAttr", "htmlPre
 " exe "hi! yamlAnchor" .s:fg_col11
 " exe "hi! yamlAlias" .s:fg_col7
 " exe "hi! yamlDocumentHeader" .s:fg_col13
-" +++ _Normal {{{
-hi! link yamlKeyValueDelimiter _Normal
-hi! link yamlFlowMapping _Normal
-hi! link yamlFlowCollection _Normal
-hi! link yamlPlainScalar _Normal
-hi! link yamlFlowIndicator _Normal
+" +++ Normal {{{
+hi! link yamlKeyValueDelimiter Normal
+hi! link yamlFlowMapping Normal
+hi! link yamlFlowCollection Normal
+hi! link yamlPlainScalar Normal
+hi! link yamlFlowIndicator Normal
 " +++ }}}
 " +++ _Comment {{{
 hi! link yamlComment _Comment
@@ -724,11 +723,11 @@ exe "hi! vimfilerMarkedFile"  .s:fg_col14
 call s:h_link("_Unknown", "vimfilerMark", "vimfilerCurrentDirectory", "vimfilerStatus", "vimfilerDirectory")
 " }}}
 " ++ markdown {{{
-" +++ _Normal {{{
-hi! link mkdLinkTitle _Normal
-hi! link mkdListBlock0 _Normal
-hi! link mkdListBlock1 _Normal
-hi! link mkdListBlock2 _Normal
+" +++ Normal {{{
+hi! link mkdLinkTitle Normal
+hi! link mkdListBlock0 Normal
+hi! link mkdListBlock1 Normal
+hi! link mkdListBlock2 Normal
 " +++ }}}
 " +++ _String {{{
 hi! link mkdCode _String
