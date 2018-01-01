@@ -100,7 +100,7 @@ exe "hi! _Unknown" .s:bg_col("#990000")
 " 固定のもの
 exe "hi! Normal" .s:fg_col4 .s:bg_col0
 exe "hi! NonText" .s:bg_col1 .s:fg_col14
-hi! link SpecialKey _Unknown
+exe "hi! SpecialKey" s:fg_col11
 exe "hi! Operator" .s:fg_col4
 exe "hi! Delimiter" .s:fg_col4
 hi! link Comment _Comment
