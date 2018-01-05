@@ -19,7 +19,7 @@ let g:colors_name = 'lighthouse'
 if has("gui_running") || has('gui') || has('nvim')
     let s:vmode       = "gui"
     let s:col0        = "#191925" "黒
-    let s:col1        = "#303442"
+    let s:col1        = "#293239"
     let s:col2        = "#515960"
     let s:col3        = "#c4cbd2"
     let s:col4        = "#ede4fd" "白
@@ -126,9 +126,9 @@ exe "hi! Special" .s:fg_col6
 exe "hi! Type" .s:fg_col8
 exe "hi! Conceal" .s:bg_col0 .s:fg_col0
 
-exe "hi! Cursor" .s:bg_col1 .s:fg_col0
+exe "hi! Cursor" .s:bg_col4 .s:fg_col0
 exe "hi! CursorColumn"                                 " gui=NONE cterm=NONE"
-exe "hi! CursorLine" .s:bg_col1
+exe "hi! CursorLine" .s:bg_col2
 exe "hi! CursorLineNr" .s:fg_col4  .s:bg_col1
 exe "hi! LineNr" .s:bg_col("#1f2028") .s:fg_col("#444b61")
 exe "hi! DiffAdd"                .s:fg_col11       .s:bg_col0 .s:hl_special("underline")
