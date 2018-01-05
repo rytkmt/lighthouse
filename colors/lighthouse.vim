@@ -22,7 +22,7 @@ if has("gui_running") || has('gui') || has('nvim')
     let s:col1        = "#293239"
     let s:col2        = "#515960"
     let s:col3        = "#c4cbd2"
-    let s:col4        = "#ede4fd" "白
+    let s:col4        = "#e4dee8" "白
     let s:col5        = "#747480" "グレー
     let s:col6        = "#605a94" "濃い紫
     let s:col7        = "#888abf" "薄紫
