@@ -21,7 +21,7 @@ if has("gui_running") || has('gui') || has('nvim')
     let s:col0        = "#191925" "黒
     let s:col1        = "#293239"
     let s:col2        = "#515960"
-    let s:col3        = "#c4cbd2"
+    let s:col3        = "#a4a4b2"
     let s:col4        = "#e4dee8" "白
     let s:col5        = "#747480" "グレー
     let s:col6        = "#605a94" "濃い紫
@@ -80,7 +80,9 @@ endfunction
 
 function! s:h_link(to, ...)
   for from in a:000
-    exe "hi! link " .from ." " .a:to
+    if !empty(from)
+      exe "hi! link " .from ." " .a:to
+    endif
   endfor
 endfunction
 "}}}
@@ -93,6 +95,7 @@ hi! link _Regexp _String
 exe "hi! _Note" .s:fg_col13
 exe "hi! _Error" .s:fg_col15
 exe "hi! _Unknown" .s:bg_col("#990000")
+exe "hi! _Unknown2" .s:bg_col("#eeee00")
 " }}}
 
 " + 基本の設定 {{{
@@ -713,7 +716,7 @@ call s:h_link("_Unknown", "yamlTodo", "yamlTAGDirective", "yamlYAMLDirective", "
       \ "yamlDirectiveName", "yamlString", "yamlConstant", "yamlKey", "yamlDocumentHeader")
 "}}}
 " ++ vimfiler {{{
-exe "hi! vimfilerNormalFile"  .s:fg_col3
+exe "hi! vimfilerNormalFile"  .s:fg_col4
 exe "hi! vimfilerROFile"  .s:fg_col7
 exe "hi! vimfilerClosedFile"  .s:fg_col9
 exe "hi! vimfilerOpenedFile"  .s:fg_col11
@@ -773,5 +776,21 @@ hi! link tomlComment _Comment
 exe "hi! tomlTableArray" .s:fg_col9
 exe "hi! tomlLabel" .s:fg_col6
 call s:h_link("_Unknown", "tomlEscape", "tomlLineEscape", "tomlInteger", "tomlFloat", "tomlBoolean", "tomlDate", "tomlTable", "tomlTodo")
+" ++ }}}
+" ++ CtrlP {{{
+exe "hi! CtrlPPrtCursor" .s:hl_special("reverse")
+hi! link CtrlPPrtText Normal
+hi! link CtrlPPrtBase Normal
+hi! link CtrlPBufferNr Normal
+hi! link CtrlPBufferPath Normal
+exe "hi! CtrlPBufferHidMod" .s:fg_col14
+exe "hi! CtrlPMode1" .s:fg_col9
+exe "hi! CtrlPMode2" .s:fg_col11
+exe "hi! CtrlPMatch" .s:fg_col6
+exe "hi! CtrlPNoEntries" .s:fg_col15
+exe "hi! CtrlPBufferInd" .s:fg_col7
+exe "hi! CtrlPBufferHid" .s:fg_col3
+call s:h_link("_Unknown", "CtrlPBufferCur", "CtrlPBufferCurMod", "CtrlPPrtBase", "CtrlPBufferVis", "CtrlPStats", "CtrlPLinePre", "CtrlPMark", "")
+
 " ++ }}}
 " + }}}
