@@ -122,12 +122,14 @@ hi! link Constant _Value
 exe "hi! Function" .s:fg_col14
 exe "hi! Identifier" .s:fg_col7
 exe "hi! MoreMsg" .s:fg_col11
+exe "hi! Title" .s:fg_col11
 exe "hi! WarningMsg" .s:fg_col13
 exe "hi! PreProc" .s:fg_col11
 exe "hi! Question" .s:fg_col4
 exe "hi! Special" .s:fg_col6
 exe "hi! Type" .s:fg_col8
 exe "hi! Conceal" .s:bg_col0 .s:fg_col0
+exe "hi! Todo" .s:fg_col15
 
 exe "hi! Cursor" .s:bg_col4 .s:fg_col0
 exe "hi! CursorColumn"                                 " gui=NONE cterm=NONE"
@@ -142,8 +144,8 @@ exe "hi! Directory" .s:fg_col8
 exe "hi! Folded" .s:fg_col15 .s:bg_col1
 exe "hi! PMenu"                  .s:fg_col15       .s:bg_col1
 exe "hi! PMenuSel"               .s:fg_col11       .s:bg_col1 .s:hl_special("underline")
-call s:h_link("_Unknown", "PMenuSBar", "PMenuThumb", "SignColumn", "FoldColumn",
-\ "Structure", "Title", "Todo", "SpellBad", "SpellCap", "SpellLocal", "SpellRare", "StatusLine")
+call s:h_link("_Unknown", "Structure", "PMenuSBar", "PMenuThumb", "SignColumn", "FoldColumn")
+call s:h_link("_Unknown", "SpellBad", "SpellCap", "SpellLocal", "SpellRare", "StatusLine")
 exe "hi! StatusLine" .s:hl_special("reverse") .s:bg_col("#17171b") .s:fg_col("#818596")
 exe "hi! StatusLineTerm" .s:hl_special("reverse") .s:bg_col("#17171b") .s:fg_col("#818596")
 exe "hi! StatusLineNC" .s:hl_special("reverse") .s:bg_col("#3e445e") .s:fg_col("#0f1117")
@@ -494,7 +496,8 @@ exe "hi! rubyClassVariable" .s:fg_col13
 exe "hi! rubyGlobalVariable" .s:fg_col13
 " $1
 exe "hi! rubyPredefinedVariable" .s:fg_col13
-
+" #! /usr/bin/ruby
+exe "hi! rubySharpBang" .s:fg_col13
 
 " -------- col14 -----------"
 " Person  Exception "
@@ -507,13 +510,19 @@ exe "hi! rubyPredefinedConstant" .s:fg_col14
 exe "hi! rubyInterpolationDelimiter" .s:fg_col14
 " / some / "
 exe "hi! rubyRegexpDelimiter" .s:fg_col14
+" __END__
+exe "hi! rubyDataDirective" .s:fg_col14
+
+" -------- col15 -----------"
+"  __END__ より下の行
+exe "hi! rubyData" .s:fg_col15
 
 call s:h_link("_Unknown", "rubyQuoteEscape", "rubyInvalidVariable", "rubyNoInterpolation", "rubyDelimiterEscape",
       \ "rubyNestedParentheses", "rubyNestedCurlyBraces", "rubyNestedAngleBrackets", "rubyNestedSquareBrackets",
       \ "rubyRegexpParens", "rubyRegexpBrackets", "rubyASCIICode", "rubyLocalVariableOrMethod", "rubyBlockArgument")
-call s:h_link("_Unknown", "rubySymbolDelimiter", "rubyHeredocStart", "rubyHeredoc", "rubyAliasDeclaration2", "rubyAliasDeclaration",
-      \ "rubyBeginEnd", "rubySharpBang", "rubySpaceError", "rubyMultilineComment", "rubyKeywordAsMethod",
-      \ "rubyDataDirective", "rubyData", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError")
+call s:h_link("_Unknown", "rubySpaceError", "rubyMultilineComment", "rubyKeywordAsMethod", "rubyBeginEnd", "rubySymbolDelimiter", "rubyHeredocStart", "rubyHeredoc", "rubyAliasDeclaration2", "rubyAliasDeclaration")
+call s:h_link("_Unknown", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError",
+      \ )
 " ++ }}}
 " ++ javascript {{{
 " +++ Normal {{{
