@@ -111,6 +111,7 @@ hi! link String _String
 hi! link Error _Error
 hi! link ErrorMsg _Error
 
+exe "hi! IncSearch" .s:bg_col14 .s:fg_col1 .s:hl_special("NONE")
 exe "hi! Search" .s:bg_col14 .s:fg_col1
 exe "hi! MatchParen" .s:bg_col15 .s:fg_col1
 exe "hi! Visual" .s:bg_col9 .s:fg_col0
@@ -376,6 +377,8 @@ hi! link rubyFunction Normal
 hi! link rubyMethodBlock Normal
 " some =   some >  "
 hi! link rubyDoBlock Normal
+" some = <<'VALUES'.split(/\r|\n)  <-- split()
+hi! link rubyHeredocStart Normal
 " begin some_all end <-- some_all "
 hi! link rubyBlockExpression Normal
 " case here when 1 end <-- here \s "
@@ -520,8 +523,8 @@ exe "hi! rubyData" .s:fg_col15
 call s:h_link("_Unknown", "rubyQuoteEscape", "rubyInvalidVariable", "rubyNoInterpolation", "rubyDelimiterEscape",
       \ "rubyNestedParentheses", "rubyNestedCurlyBraces", "rubyNestedAngleBrackets", "rubyNestedSquareBrackets",
       \ "rubyRegexpParens", "rubyRegexpBrackets", "rubyASCIICode", "rubyLocalVariableOrMethod", "rubyBlockArgument")
-call s:h_link("_Unknown", "rubySpaceError", "rubyMultilineComment", "rubyKeywordAsMethod", "rubyBeginEnd", "rubySymbolDelimiter", "rubyHeredocStart", "rubyHeredoc", "rubyAliasDeclaration2", "rubyAliasDeclaration")
-call s:h_link("_Unknown", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError",
+call s:h_link("_Unknown2", "rubySpaceError", "rubyMultilineComment", "rubyBeginEnd", "rubySymbolDelimiter", "rubyHeredoc", "rubyAliasDeclaration2", "rubyAliasDeclaration")
+call s:h_link("_Unknown", "rubyKeywordAsMethod", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError",
       \ )
 " ++ }}}
 " ++ javascript {{{
@@ -796,10 +799,13 @@ exe "hi! CtrlPBufferHidMod" .s:fg_col14
 exe "hi! CtrlPMode1" .s:fg_col9
 exe "hi! CtrlPMode2" .s:fg_col11
 exe "hi! CtrlPMatch" .s:fg_col6
+exe "hi! CtrlPPrtBase" .s:fg_col6
 exe "hi! CtrlPNoEntries" .s:fg_col15
+exe "hi! CtrlPStats" .s:fg_col8
 exe "hi! CtrlPBufferInd" .s:fg_col7
 exe "hi! CtrlPBufferHid" .s:fg_col3
-call s:h_link("_Unknown", "CtrlPBufferCur", "CtrlPBufferCurMod", "CtrlPPrtBase", "CtrlPBufferVis", "CtrlPStats", "CtrlPLinePre", "CtrlPMark", "")
+call s:h_link("_Unknown", "CtrlPBufferCur", "CtrlPLinePre", "CtrlPBufferCurMod",  "CtrlPMark", "CtrlPBufferVis", "")
+call s:h_link("_Unknown2", "")
 
 " ++ }}}
 " + }}}
