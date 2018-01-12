@@ -798,10 +798,10 @@ hi! link CtrlPBufferPath Normal
 exe "hi! CtrlPBufferHidMod" .s:fg_col14
 exe "hi! CtrlPMode1" .s:fg_col9
 exe "hi! CtrlPMode2" .s:fg_col11
-exe "hi! CtrlPMatch" .s:fg_col6
-exe "hi! CtrlPPrtBase" .s:fg_col6
+exe "hi! CtrlPMatch" .s:fg_col8
+exe "hi! CtrlPPrtBase" .s:fg_col8
 exe "hi! CtrlPNoEntries" .s:fg_col15
-exe "hi! CtrlPStats" .s:fg_col8
+exe "hi! CtrlPStats" .s:fg_col6
 exe "hi! CtrlPBufferInd" .s:fg_col7
 exe "hi! CtrlPBufferHid" .s:fg_col3
 call s:h_link("_Unknown", "CtrlPBufferCur", "CtrlPLinePre", "CtrlPBufferCurMod",  "CtrlPMark", "CtrlPBufferVis", "")
