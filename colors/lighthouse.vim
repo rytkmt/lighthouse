@@ -795,10 +795,11 @@ hi! link CtrlPPrtText Normal
 hi! link CtrlPPrtBase Normal
 hi! link CtrlPBufferNr Normal
 hi! link CtrlPBufferPath Normal
+
 exe "hi! CtrlPBufferHidMod" .s:fg_col14
 exe "hi! CtrlPMode1" .s:fg_col9
 exe "hi! CtrlPMode2" .s:fg_col11
-exe "hi! CtrlPMatch" .s:fg_col8
+exe "hi! CtrlPMatch" .s:fg_col("#a66858") .s:hl_special("bold")
 exe "hi! CtrlPPrtBase" .s:fg_col8
 exe "hi! CtrlPNoEntries" .s:fg_col15
 exe "hi! CtrlPStats" .s:fg_col6
