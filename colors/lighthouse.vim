@@ -18,7 +18,7 @@ let g:colors_name = 'lighthouse'
 
 if has("gui_running") || has('gui') || has('nvim')
     let s:vmode       = "gui"
-    let s:col0        = "#191925" "黒
+    let s:col0        = "#191928" "黒
     let s:col1        = "#293239"
     let s:col2        = "#515960"
     let s:col3        = "#a4a4b2"
