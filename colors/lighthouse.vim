@@ -1,5 +1,6 @@
 " File:       iceberg.vim Maintainer: cocopon <cocopon@me.com>
 " Modified:   2017-11-30 20:32+0900
+"
 " License:    MIT
 
 
@@ -586,13 +587,16 @@ exe "hi! javaScriptRepeat" .s:fg_col8 .s:hl_special("bold")
 exe "hi! javaScriptLabel" .s:fg_col8 .s:hl_special("bold")
 " try catch
 exe "hi! javaScriptException" .s:fg_col8 .s:hl_special("bold")
+" --------------- col11 --------------------- "
+"debugger;
+exe "hi! javaScriptReserved" .s:fg_col11
 " ------------- col14 ----------------- "
 " Date "
 exe "hi! javaScriptType" .s:fg_col14
 " -------------- ??? ---------------------- "
 call s:h_link("_Unknown", "javaScriptRailsFunction", "javaScriptTemplateVar", "javaScriptTemplateDelim", "javaScriptTemplateString",
-      \ "javaScriptCommentTodo", "javaScriptCommentSkip", "javaScriptSpecial", "javaScriptSpecialCharacter", "javaScriptDeprecated",
-      \ "javaScriptReserved", "javaScriptCharacter", "javaScriptError", "javaScrParenError", "javaScriptDebug", "javaScriptConstant", "javaScriptExpression")
+      \ "javaScriptCommentTodo", "javaScriptCommentSkip", "javaScriptSpecial", "javaScriptSpecialCharacter", "javaScriptDeprecated")
+ call s:h_link("_Unknown2","javaScriptCharacter", "javaScriptError", "javaScrParenError", "javaScriptDebug", "javaScriptConstant", "javaScriptExpression")
 " }}}
 " ++ html {{{
 " +++ Normal {{{
