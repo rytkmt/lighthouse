@@ -19,7 +19,7 @@ let g:colors_name = 'lighthouse'
 
 if has("gui_running") || has('gui') || has('nvim')
     let s:vmode       = "gui"
-    let s:col0        = "#191925" "黒
+    let s:col0        = "#191928" "黒
     let s:col1        = "#293239"
     let s:col2        = "#515960"
     let s:col3        = "#a4a4b2"
@@ -135,7 +135,7 @@ exe "hi! Todo" .s:fg_col15 .s:bg_col0
 
 exe "hi! Cursor" .s:bg_col4 .s:fg_col0
 exe "hi! CursorColumn"                                 " gui=NONE cterm=NONE"
-exe "hi! CursorLine" .s:bg_col2
+exe "hi! CursorLine" .s:hl_special("underline") .s:bg_col("NONE") .s:sp_col2
 exe "hi! CursorLineNr" .s:fg_col4  .s:bg_col1
 exe "hi! LineNr" .s:bg_col("#1f2028") .s:fg_col("#444b61")
 exe "hi! DiffAdd"                .s:fg_col11       .s:bg_col0 .s:hl_special("underline")
@@ -799,10 +799,11 @@ hi! link CtrlPPrtText Normal
 hi! link CtrlPPrtBase Normal
 hi! link CtrlPBufferNr Normal
 hi! link CtrlPBufferPath Normal
+
 exe "hi! CtrlPBufferHidMod" .s:fg_col14
 exe "hi! CtrlPMode1" .s:fg_col9
 exe "hi! CtrlPMode2" .s:fg_col11
-exe "hi! CtrlPMatch" .s:fg_col8
+exe "hi! CtrlPMatch" .s:fg_col("#a66858") .s:hl_special("bold")
 exe "hi! CtrlPPrtBase" .s:fg_col8
 exe "hi! CtrlPNoEntries" .s:fg_col15
 exe "hi! CtrlPStats" .s:fg_col6
