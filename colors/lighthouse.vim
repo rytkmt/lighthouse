@@ -408,6 +408,8 @@ hi! link rubyModuleDeclaration Normal
 hi! link rubyEval Normal
 " defined?(some) <-- defined?
 hi! link rubyOperator Normal
+" BigDecimal
+hi! link rubyLocalVariableOrMethod Normal
 " +++ }}}
 " +++ _String {{{
 " :some "
@@ -522,10 +524,11 @@ exe "hi! rubyDataDirective" .s:fg_col14
 exe "hi! rubyData" .s:fg_col15
 
 call s:h_link("_Unknown", "rubyQuoteEscape", "rubyInvalidVariable", "rubyNoInterpolation", "rubyDelimiterEscape",
+      \ "rubyRegexpParens", "rubyRegexpBrackets", "rubyASCIICode", "rubyBlockArgument")
+call s:h_link("_Unknown2", "rubySpaceError", "rubyMultilineComment", "rubyBeginEnd", "rubySymbolDelimiter", "rubyHeredoc",
       \ "rubyNestedParentheses", "rubyNestedCurlyBraces", "rubyNestedAngleBrackets", "rubyNestedSquareBrackets",
-      \ "rubyRegexpParens", "rubyRegexpBrackets", "rubyASCIICode", "rubyLocalVariableOrMethod", "rubyBlockArgument")
-call s:h_link("_Unknown2", "rubySpaceError", "rubyMultilineComment", "rubyBeginEnd", "rubySymbolDelimiter", "rubyHeredoc", "rubyAliasDeclaration2", "rubyAliasDeclaration")
-call s:h_link("_Unknown", "rubyKeywordAsMethod", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError",
+      \ "rubyAliasDeclaration2", "rubyAliasDeclaration")
+call s:h_link("_Unknown2", "rubyKeywordAsMethod", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError",
       \ )
 " ++ }}}
 " ++ javascript {{{
