@@ -131,7 +131,7 @@ exe "hi! Question" .s:fg_col4
 exe "hi! Special" .s:fg_col6
 exe "hi! Type" .s:fg_col8
 exe "hi! Conceal" .s:bg_col0 .s:fg_col0
-exe "hi! Todo" .s:fg_col15 .s:bg_col0
+exe "hi! Todo" .s:fg_col13 .s:bg_col0
 
 exe "hi! Cursor" .s:bg_col4 .s:fg_col0
 exe "hi! CursorColumn"                                 " gui=NONE cterm=NONE"
