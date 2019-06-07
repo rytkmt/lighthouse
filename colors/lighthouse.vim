@@ -414,8 +414,10 @@ hi! link rubyLocalVariableOrMethod Normal
 " +++ _String {{{
 " :some "
 hi! link rubySymbol _String
-" " " "
+" " ", %w()
 hi! link rubyStringDelimiter _String
+" %i()
+hi! link rubySymbolDelimiter _String
 " "string"
 hi! link rubyString _String
 " \s \\ \r\n"
@@ -525,7 +527,7 @@ exe "hi! rubyData" .s:fg_col15
 
 call s:h_link("_Unknown", "rubyQuoteEscape", "rubyInvalidVariable", "rubyNoInterpolation", "rubyDelimiterEscape",
       \ "rubyRegexpParens", "rubyRegexpBrackets", "rubyASCIICode", "rubyBlockArgument")
-call s:h_link("_Unknown2", "rubySpaceError", "rubyMultilineComment", "rubyBeginEnd", "rubySymbolDelimiter", "rubyHeredoc",
+call s:h_link("_Unknown2", "rubySpaceError", "rubyMultilineComment", "rubyBeginEnd", "rubyHeredoc",
       \ "rubyNestedParentheses", "rubyNestedCurlyBraces", "rubyNestedAngleBrackets", "rubyNestedSquareBrackets",
       \ "rubyAliasDeclaration2", "rubyAliasDeclaration")
 call s:h_link("_Unknown2", "rubyKeywordAsMethod", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError",
