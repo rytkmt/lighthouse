@@ -103,6 +103,7 @@ exe "hi! _Unknown2" .s:bg_col("#eeee00")
 
 " 固定のもの
 exe "hi! Normal" .s:fg_col4 .s:bg_col0
+hi! link SignColumn Normal
 exe "hi! NonText" .s:bg_col1 .s:fg_col14
 exe "hi! SpecialKey" s:fg_col11
 exe "hi! Operator" .s:fg_col4
@@ -146,7 +147,7 @@ exe "hi! Directory" .s:fg_col8
 exe "hi! Folded" .s:fg_col15 .s:bg_col1
 exe "hi! PMenu"                  .s:fg_col15       .s:bg_col1
 exe "hi! PMenuSel"               .s:fg_col11       .s:bg_col1 .s:hl_special("underline")
-call s:h_link("_Unknown", "Structure", "PMenuSBar", "PMenuThumb", "SignColumn", "FoldColumn")
+call s:h_link("_Unknown", "Structure", "PMenuSBar", "PMenuThumb", "FoldColumn")
 call s:h_link("_Unknown", "SpellBad", "SpellCap", "SpellLocal", "SpellRare", "StatusLine")
 exe "hi! StatusLine" .s:hl_special("reverse") .s:bg_col("#17171b") .s:fg_col("#818596")
 exe "hi! StatusLineTerm" .s:hl_special("reverse") .s:bg_col("#17171b") .s:fg_col("#818596")
@@ -158,6 +159,8 @@ exe "hi! TabLine" .s:hl_special("NONE") .s:bg_col("#161821") .s:fg_col("#9a9ca5"
 exe "hi! Underlined" .s:hl_special("underline") .s:fg_col15
 exe "hi! VertSplit" .s:bg_col("#0f1117") .s:fg_col("#0f1117")
 exe "hi! WildMenu" .s:bg_col3 .s:fg_col0
+
+exe "hi! ColorColumn" .s:bg_col("#282840")
 " }}}
 
 
