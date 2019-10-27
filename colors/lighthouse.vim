@@ -821,4 +821,13 @@ call s:h_link("_Unknown", "CtrlPBufferCur", "CtrlPLinePre", "CtrlPBufferCurMod",
 call s:h_link("_Unknown2", "")
 
 " ++ }}}
+" ++ coc {{{
+" +++ coc git {{{
+exe "hi! CocGitAddedSign"                .s:fg_col11       .s:bg_col0
+exe "hi! CocGitRemovedSign"             .s:fg_col15   .s:bg_col0
+exe "hi! CocGitChangedSign"             .s:fg_col9      .s:bg_col0
+exe "hi! CocGitChangeRemovedSign"             .s:fg_col10      .s:bg_col0
+exe "hi! CocGitTopRemovedSign"               .s:fg_col13      .s:bg_col0
+" +++ }}}
+" ++ }}}
 " + }}}
