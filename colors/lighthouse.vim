@@ -749,6 +749,9 @@ exe "hi! vimfilerNonMark"  .s:fg_col13
 exe "hi! vimfilerMarkedFile"  .s:fg_col14
 call s:h_link("_Unknown", "vimfilerMark", "vimfilerCurrentDirectory", "vimfilerStatus", "vimfilerDirectory")
 " }}}
+" ++ defx {{{
+exe "hi! Defx_filename_3_directory"  .s:fg_col8
+" }}}
 " ++ markdown {{{
 " +++ Normal {{{
 hi! link mkdLinkTitle Normal
