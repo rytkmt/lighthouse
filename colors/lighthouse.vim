@@ -751,6 +751,8 @@ call s:h_link("_Unknown", "vimfilerMark", "vimfilerCurrentDirectory", "vimfilerS
 " }}}
 " ++ defx {{{
 exe "hi! Defx_filename_3_directory"  .s:fg_col8
+hi link Defx_filename_3 Normal
+
 " }}}
 " ++ markdown {{{
 " +++ Normal {{{
