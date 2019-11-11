@@ -749,7 +749,7 @@ exe "hi! vimfilerMarkedFile"  .s:fg_col14
 call s:h_link("_Unknown", "vimfilerMark", "vimfilerCurrentDirectory", "vimfilerStatus", "vimfilerDirectory")
 " }}}
 " ++ defx {{{
-exe "hi! Defx_filename_3_directory"  .s:fg_col8
+exe "hi! Defx_filename_3_directory"  .s:fg_col8 .s:bg_col0
 hi link Defx_filename_3 Normal
 " Defx_mark_0    xxx cleared
 " Defx_mark_0_readonly xxx links to Comment
