@@ -853,4 +853,10 @@ exe "hi! CocGitChangeRemovedSign"             .s:fg_col10      .s:bg_col0
 exe "hi! CocGitTopRemovedSign"               .s:fg_col13      .s:bg_col0
 " +++ }}}
 " ++ }}}
+" ++ syntastic {{{
+exe "hi! SyntasticErrorSign"                .s:fg_col0       .s:bg_col15
+exe "hi! SyntasticWarningSign"                .s:fg_col0       .s:bg_col13
+exe "hi! SyntasticStyleErrorSign"                .s:fg_col15
+exe "hi! SyntasticStyleWarningSign"                .s:fg_col13
+" ++ }}}
 " + }}}
