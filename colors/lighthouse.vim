@@ -860,3 +860,5 @@ exe "hi! SyntasticStyleErrorSign"                .s:fg_col15
 exe "hi! SyntasticStyleWarningSign"                .s:fg_col13
 " ++ }}}
 " + }}}
+
+hi! FloatWindowBG guibg=#242630
