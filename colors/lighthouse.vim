@@ -135,9 +135,10 @@ exe "hi! Todo" .s:fg_col13 .s:bg_col0
 
 exe "hi! Cursor" .s:bg_col4 .s:fg_col0
 exe "hi! CursorColumn"                                 " gui=NONE cterm=NONE"
-exe "hi! CursorLine" .s:hl_special("underline") .s:bg_col("NONE") .s:sp_col2
+" exe "hi! CursorLine" .s:hl_special("underline") .s:bg_col("NONE") .s:sp_col2
+exe "hi! CursorLine" .s:hl_special("NONE") .s:bg_col("NONE")
 exe "hi! CursorLineNr" .s:fg_col4  .s:bg_col1
-exe "hi! LineNr" .s:bg_col("#1f2028") .s:fg_col("#444b61")
+exe "hi! LineNr" .s:bg_col("#1f2028") .s:fg_col("#545b71")
 exe "hi! DiffAdd"                .s:fg_col11       .s:bg_col0 .s:hl_special("underline")
 exe "hi! DiffDelete"             .s:fg_col15   .s:bg_col0
 exe "hi! DiffChange"             .s:fg_col9      .s:bg_col0 .s:hl_special("underline")
