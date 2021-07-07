@@ -756,6 +756,8 @@ hi link Defx_filename_3 Normal
 " Defx_mark_0_readonly xxx links to Comment
 " Defx_mark_0_selected xxx links to Statement
 " Defx_filename_3 xxx cleared
+exe "hi! Defx_filename_3" .s:fg_col8
+exe "hi! DefxIconsMarkIcon" .s:fg_col13 .s:hl_special("underline")
 " Defx_filename_3_directory_icon xxx links to Special
 " Defx_filename_3_opened_icon xxx links to Special
 " Defx_filename_3_root_icon xxx links to Identifier
