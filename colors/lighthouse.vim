@@ -138,10 +138,12 @@ exe "hi! CursorColumn"                                 " gui=NONE cterm=NONE"
 exe "hi! CursorLine" .s:hl_special("NONE") .s:bg_col("NONE")
 exe "hi! CursorLineNr" .s:fg_col4  .s:bg_col1
 exe "hi! LineNr" .s:bg_col("#1f2028") .s:fg_col("#545b71")
-exe "hi! DiffAdd"                .s:bg_col("#2c4733")
-exe "hi! DiffDelete"             .s:fg_col("#622323")      .s:bg_col("#622323")
-exe "hi! DiffChange"                   .s:bg_col("#29294a")
-exe "hi! DiffText"               .s:fg_col4 .s:bg_col("#635c32")
+exe "hi! DiffAdd"                .s:bg_col("#1c3333")
+hi clear DiffDelete
+exe "hi! DiffDelete"             .s:fg_col("#302020")      .s:bg_col("#302020")
+
+exe "hi! DiffChange"                   .s:bg_col("#202238")
+exe "hi! DiffText"               .s:fg_col0 .s:bg_col("#3d3d28")
 exe "hi! Directory" .s:fg_col8
 exe "hi! Folded" .s:fg_col15 .s:bg_col1
 exe "hi! PMenu"                  .s:fg_col15       .s:bg_col1
