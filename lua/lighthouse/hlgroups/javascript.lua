@@ -74,11 +74,11 @@ function M.mapping()
       -- null "
       "javaScriptNull",
     },
-    Unknown = {
+    _Unknown = {
       "javaScriptRailsFunction", "javaScriptTemplateVar", "javaScriptTemplateDelim", "javaScriptTemplateString",
       "javaScriptCommentTodo", "javaScriptCommentSkip", "javaScriptSpecial", "javaScriptSpecialCharacter", "javaScriptDeprecated",
     },
-    Unknown2 = {
+    _Unknown2 = {
       "javaScriptCharacter", "javaScriptError", "javaScrParenError", "javaScriptDebug", "javaScriptConstant", "javaScriptExpression",
     }
   })

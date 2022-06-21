@@ -197,7 +197,7 @@ function M.mapping()
       -- !important "
       "cssImportant",
     },
-    Unknown = {
+    _Unknown = {
       "cssMediaBlock", "cssError", "cssDefinition", "cssPageWrap", "cssPage",
       "cssPageMargin", "cssKeyFrameWrap", "cssKeyFrame", "cssFontDescriptorBlock",
       "cssFlexibleBoxAttr", "cssGridProp", "cssBraceError", "cssDeprecated", "cssProp",

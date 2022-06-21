@@ -88,12 +88,10 @@ function M.mapping()
     -- -------- red -----------"
     --  __END__ より下の行
     rubyData = { fg = colors.red },
-    rubyHoge1 = { fg = colors.red },
   }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
     Normal = {
-      "rubyHoge2",
       -- 3.times do |here| <-- here "
       "rubyBlockParameter",
       -- #{ here } <-- here"
@@ -171,17 +169,111 @@ function M.mapping()
       -- true false "
       "rubyBoolean",
     },
-    Unknown = {
+    _Unknown = {
       "rubyQuoteEscape", "rubyInvalidVariable", "rubyNoInterpolation", "rubyDelimiterEscape",
       "rubyRegexpParens", "rubyRegexpBrackets", "rubyASCIICode", "rubyBlockArgument",
     },
-    Unknown2 = {
+    _Unknown2 = {
       "rubySpaceError", "rubyMultilineComment", "rubyBeginEnd", "rubyHeredoc",
       "rubyNestedParentheses", "rubyNestedCurlyBraces", "rubyNestedAngleBrackets", "rubyNestedSquareBrackets",
       "rubyAliasDeclaration2", "rubyAliasDeclaration",
       "rubyKeywordAsMethod", "rubyIdentifier", "rubyPredefinedIdentifier", "rubyError",
     },
+    rubyConstant = {
+      "rubyModuleName", "rubyClassName"
+    },
+    rubyStringEscape = {
+      "rubyBackslashEscape",
+      "rubySpaceEscape",
+      "rubyParenthesisEscape",
+      "rubyCurlyBraceEscape",
+      "rubyAngleBracketEscape",
+      "rubySquareBracketEscape",
+      "rubyAtEscape",
+      "rubyCaretEscape",
+      "rubyUnderscoreEscape",
+      "rubyBackQuoteEscape",
+      "rubyBangEscape",
+      "rubyDoubleQuoteEscape",
+      "rubyHashEscape",
+      "rubyDollarEscape",
+      "rubyPercentEscape",
+      "rubyAmpersandEscape",
+      "rubyAsterixEscape",
+      "rubyPlusEscape",
+      "rubyCommaEscape",
+      "rubyDashEscape",
+      "rubyPeriodEscape",
+      "rubyForwardSlashEscape",
+      "rubyColonEscape",
+      "rubySemicolonEscape",
+      "rubyBarEscape",
+      "rubyEqualsEscape",
+      "rubyTildeEscape",
+      "rubyQuestionMarkEscape",
+    },
+    rubyOperator = {
+      "rubyEnglishBooleanOperator",
+      "rubyDefinedOperator"
+    },
+    rubyRegexpSpecial = {
+      "rubyRegexpIntersection"
+    },
+    rubyStringDelimiter = {
+      "rubyPercentStringDelimiter",
+      "rubyHeredocDelimiter"
+    },
+    rubySymbolDelimiter = {
+      "rubyPercentSymbolDelimiter"
+    },
+    rubyRegexpDelimiter = {
+      "rubyPercentRegexpDelimiter"
+    },
+    rubyError = {
+      "rubyGlobalVariableError"
+    },
+    Character = {
+      "rubyCharacter"
+    },
+    rubyFunction = {
+      "rubyMethodName"
+    },
+    rubyExceptionHandler = {
+      "rubyRescueModifier",
+      "rubyConditional"
+    },
+    rubyDefine = {
+      "rubyExceptionHandler2"
+    },
+    Macro = {
+      "rubyMacro"
+    },
+    Constant = {
+      "rubyEncoding"
+    },
+    SpecialComment = {
+      "rubyMagicComment"
+    },
   })
+
+  -- TreeSitter
+  require("lighthouse.hlgroups").link_hlgroups(mapping, {
+    String = {
+      "rubyTSSymbol",
+      "rubyTSConstant", -- HEREや%iの中身など
+    }
+  })
+-- rubyParentheses xxx cleared
+-- rubyCapitalizedMethod xxx cleared
+-- rubyScopeOperator xxx cleared
+-- rubySuperClassOperator xxx cleared
+-- rubyEigenClassOperator xxx cleared
+-- rubyClassBlock xxx cleared
+-- rubyModuleBlock xxx cleared
+-- rubyLineContinuation xxx cleared
+-- rubyUselessLineContinuation xxx cleared
+-- rubyDotOperator xxx cleared
+-- rubyBangPredicateMethod xxx cleared
 
   return mapping
 end

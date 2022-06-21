@@ -12,7 +12,7 @@ function M.mapping()
   }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
-    Unknown = {
+    _Unknown = {
       "tomlEscape", "tomlLineEscape", "tomlInteger", "tomlFloat", "tomlBoolean", "tomlDate", "tomlTable", "tomlTodo",
     }
   })

@@ -36,13 +36,14 @@ function M.setup()
     String = { link = "_String" },
     Error = { link = "_Error" },
     ErrorMsg = { link = "_Error" },
+    Structure = { link = "Normal" },
 
     IncSearch = { bg = colors.orange , fg = colors.vd_gray , style = colors.none },
     Search = { bg = colors.orange , fg = colors.vd_gray },
     MatchParen = { bg = colors.red , fg = colors.vd_gray },
     Visual = { bg = colors.l_blue , fg = colors.black },
 
-    Include = { fg = colors.l_blue },
+    Include = { fg = colors.green },
     StorageClass = { fg = colors.l_blue },
     Statement = { fg = colors.l_blue },
     Constant = { link = "_Value" },
@@ -68,14 +69,13 @@ function M.setup()
     DiffText = { fg = colors.black , bg = "#3d3d28" },
     Directory = { fg = colors.blue },
     Folded = { fg = colors.red , bg = colors.vd_gray },
-    PMenu = { fg = colors.red       , bg = colors.vd_gray },
-    PMenuSel = { fg = colors.green       , bg = colors.vd_gray , style = colors.underline },
+    Pmenu = { fg = colors.red       , bg = colors.vd_gray },
+    PmenuSel = { fg = colors.green       , bg = colors.vd_gray , style = colors.underline },
 
     StatusLine = {  style = colors.reverse , bg = "#17171b" , fg = "#818596" },
     StatusLineTerm = {  style = colors.reverse , bg = "#17171b" , fg = "#818596" },
     StatusLineNC = {  style = colors.reverse , bg = "#3e445e" , fg = "#0f1117" },
     StatusLineTermNC = {  style = colors.reverse , bg = "#3e445e" , fg = "#0f1117" },
-    TabLine = {  style = colors.none , bg = "#818596" , fg = "#17171b" },
     StatusLineTerm = {  style = colors.reverse , bg = "#17171b" , fg = "#818596" },
     TabLine = {  style = colors.none , bg = "#161821" , fg = "#9a9ca5" },
     Underlined = {  style = colors.underline , fg = colors.red },
@@ -91,6 +91,7 @@ function M.setup()
   config.hlgroups = vim.tbl_extend(
     "force",
     hlgroups,
+    require("lighthouse.hlgroups.treesitter").mapping(),
     require("lighthouse.hlgroups.css").mapping(),
     require("lighthouse.hlgroups.ruby").mapping(),
     require("lighthouse.hlgroups.javascript").mapping(),
@@ -99,16 +100,70 @@ function M.setup()
     require("lighthouse.hlgroups.defx").mapping(),
     require("lighthouse.hlgroups.markdown").mapping(),
     require("lighthouse.hlgroups.toml").mapping(),
-    require("lighthouse.hlgroups.syntastic").mapping()
+    require("lighthouse.hlgroups.syntastic").mapping(),
+    require("lighthouse.hlgroups.telescope").mapping()
   )
 
   local link_mapping = {
-    Unknown = {
-      "Structure", "PMenuSBar", "PMenuThumb", "FoldColumn",
-      "SpellBad", "SpellCap", "SpellLocal", "SpellRare", "StatusLine",
+    _Unknown = {
+      "PmenuSBar", "PmenuThumb", "FoldColumn",
+      "SpellBad", "SpellCap", "SpellLocal", "SpellRare",
     },
   }
   M.link_hlgroups(config.hlgroups, link_mapping)
+-- EndOfBuffer    xxx links to NonText
+-- TermCursor     xxx cterm=reverse gui=reverse
+-- TermCursorNC   xxx cleared
+-- ModeMsg        xxx cterm=bold gui=bold
+-- LineNrAbove    xxx links to LineNr
+-- LineNrBelow    xxx links to LineNr
+-- CursorLineSign xxx links to SignColumn
+-- CursorLineFold xxx links to FoldColumn
+-- VisualNC       xxx cleared
+-- FoldColumn     xxx ctermfg=14 ctermbg=242 guifg=Cyan guibg=Grey
+-- PmenuSbar      xxx ctermbg=248 guibg=Grey
+--                    links to Unknown
+-- PmenuThumb     xxx ctermbg=15 guibg=White
+--                    links to Unknown
+-- QuickFixLine   xxx links to Search
+-- Whitespace     xxx links to NonText
+-- NormalNC       xxx cleared
+-- MsgSeparator   xxx links to StatusLine
+-- NormalFloat    xxx links to Pmenu
+-- MsgArea        xxx cleared
+-- FloatBorder    xxx links to VertSplit
+-- RedrawDebugNormal xxx cterm=reverse gui=reverse
+-- RedrawDebugClear xxx ctermbg=11 guibg=Yellow
+-- RedrawDebugComposed xxx ctermbg=10 guibg=Green
+-- RedrawDebugRecompose xxx ctermbg=9 guibg=Red
+-- lCursor        xxx guifg=bg guibg=fg
+-- Substitute     xxx links to Search
+-- FloatShadow    xxx guibg=Black blend=80
+-- FloatShadowThrough xxx guibg=Black blend=100
+-- Float          xxx links to Number
+-- Conditional    xxx links to Statement
+-- Repeat         xxx links to Statement
+-- Label          xxx links to Statement
+-- Keyword        xxx links to Statement
+-- Exception      xxx links to Statement
+-- Define         xxx links to PreProc
+-- Macro          xxx links to PreProc
+-- PreCondit      xxx links to PreProc
+-- Structure      xxx links to Unknown
+-- Typedef        xxx links to Type
+-- Tag            xxx links to Special
+-- SpecialChar    xxx links to Special
+-- SpecialComment xxx links to Special
+-- Debug          xxx links to Special
+-- Underlined     xxx cterm=underline ctermfg=81 gui=underline guifg=#d48585
+-- Ignore         xxx ctermfg=0 guifg=bg
+-- false          xxx cleared
+-- diffRemoved    xxx cleared
+-- diffChanged    xxx cleared
+-- diffAdded      xxx cleared
+-- BlueSign       xxx cleared
+-- Method         xxx cleared
+-- Struct         xxx cleared
 end
 
 return M

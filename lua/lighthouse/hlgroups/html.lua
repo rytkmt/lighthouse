@@ -88,7 +88,7 @@ function M.mapping()
       "htmlTagError",
       "htmlCommentError",
     },
-    Unknown = {
+    _Unknown = {
       "htmlPreStmt", "htmlPreError", "htmlPreAttr", "htmlPreProc", "htmlPreProcAttrError", "htmlCssDefinition",
       "htmlPreProcAttrName", "htmlHead", "htmlEventSQ",
     }

@@ -47,7 +47,7 @@ function M.mapping()
     _Comment = {
       "mkdBlockquote",
     },
-    Unknown = {
+    _Unknown = {
       "markdownUrl", "mkdIndentCode0", "mkdIndentCode1", "mkdIndentCode2", "mkdFrontmatterDelimiter", "mkdString", "mkdMath", "mkdURLDelimiter"
     }
   })

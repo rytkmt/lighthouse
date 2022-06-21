@@ -50,7 +50,7 @@ function M.mapping()
       "yamlFlowString",
       "yamlFlowStringDelimiter",
     },
-    Unknown = {
+    _Unknown = {
       "yamlTodo", "yamlTAGDirective", "yamlYAMLDirective", "yamlReservedDirective", "yamlDirective", "yamlTagHandle",
       "yamlTagPrefix", "yamlYAMLVersion", "yamlEscape", "yamlSingleEscape", "yamlBlockScalarHeader", "yamlMappingKeyStart",
       "yamlDirectiveName", "yamlString", "yamlConstant", "yamlKey", "yamlDocumentHeader",

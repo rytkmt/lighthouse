@@ -30,7 +30,7 @@ function M.mapping()
   }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
-    Unknown2 = {
+    _Unknown2 = {
       "Defx_mark_0", "Defx_mark_0_readonly", "Defx_mark_0_selected", "Defx_filename_3", "Defx_filename_3_directory_icon",
       "Defx_filename_3_opened_icon", "Defx_filename_3_root_icon", "Defx_filename_3_directory_marker", "Defx_filename_3_file",
       "Defx_filename_3_file_marker", "Defx_filename_3_root", "Defx_filename_3_root_marker", "Defx_filename_3_hidden",

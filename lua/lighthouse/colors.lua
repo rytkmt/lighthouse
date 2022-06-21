@@ -4,7 +4,7 @@ function M.setup()
   local config = require("lighthouse").config
   config.colors = {
     black     = "#191928", -- col0
-    vd_gray   = "#293239", -- col1
+    vd_gray   = "#293037", -- col1
     d_gray    = "#515960", -- col2
     m_gray    = "#a4a4b2", -- col3
     l_gray    = "#747480", -- col4
