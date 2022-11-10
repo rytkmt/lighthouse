@@ -7,6 +7,7 @@ function M.mapping()
   local mapping = {
     TelescopeSelection = { fg = colors.white, bg = colors.vd_gray, style = colors.underline },
     TelescopeSelectionCaret = { fg = colors.yellow, bg = colors.vd_gray, style = colors.underline },
+    TelescopePreviewLine = { style = colors.underline },
   }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
