@@ -40,7 +40,7 @@ function M.setup()
 
     IncSearch = { bg = colors.orange , fg = colors.vd_gray , style = colors.none },
     Search = { bg = colors.orange , fg = colors.vd_gray },
-    MatchParen = { bg = colors.red , fg = colors.vd_gray },
+    MatchParen = { bg = colors.none , fg = colors.none, style = colors.underline },
     Visual = { bg = colors.l_blue , fg = colors.black },
 
     Include = { fg = colors.green },
