@@ -13,6 +13,7 @@ module Hoge::Fuga
     alias hoge fuga
     include Enumerable
     extend Y
+    raise(3)
     aiueo(hoge: :fuga, fuga: 23)
     test :a
     [
@@ -31,7 +32,7 @@ module Hoge::Fuga
       def y(*a, **b)
         3.times { next }
         begin
-        rescue
+        rescue => e
         end
         2.each.with_index { break }
         [].each do
@@ -42,6 +43,8 @@ module Hoge::Fuga
       end
 
       def HogeFuga()
+        yield
+
         Encoding::Hoge
         case 3
         when true
@@ -61,6 +64,7 @@ module Hoge::Fuga
             aiueo
           HERE
           return 3
+        elsif 3
         else
         end
       rescue Error => error
@@ -73,9 +77,12 @@ module Hoge::Fuga
         [aiueo],
         %i[aa]
       )
+      raise
     end
   end
 end
+
+Hoge::Fuga
 
 =begin
 

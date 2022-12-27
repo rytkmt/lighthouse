@@ -41,14 +41,15 @@ function M.setup()
     IncSearch = { bg = colors.orange , fg = colors.vd_gray , style = colors.none },
     Search = { bg = colors.orange , fg = colors.vd_gray },
     MatchParen = { bg = colors.none , fg = colors.none, style = colors.underline },
-    Visual = { bg = colors.l_blue , fg = colors.black },
+    Visual = { bg = colors.d_gray , fg = colors.none },
 
-    Include = { fg = colors.green },
+    Include = { fg = colors.l_purple },
     StorageClass = { fg = colors.l_blue },
-    Statement = { fg = colors.l_blue },
+    Statement = { fg = colors.l_blue, style = colors.none },
+    Exception = { fg = colors.l_blue, style = colors.none },
     Constant = { link = "_Value" },
-    Function = { fg = colors.orange },
-    Identifier = { fg = colors.l_purple },
+    Function = { fg = colors.green },
+    Identifier = { fg = colors.green },
     MoreMsg = { fg = colors.green },
     Title = { fg = colors.green },
     WarningMsg = { fg = colors.yellow },
@@ -71,7 +72,7 @@ function M.setup()
     diffRemoved = {  fg = colors.red, bg = "#302020" },
     diffChanged = {  fg = colors.yellow },
     Directory = { fg = colors.blue },
-    Folded = { fg = colors.red , bg = colors.vd_gray },
+    Folded = { fg = colors.jade , bg = colors.vd_gray },
     Pmenu = { fg = colors.red       , bg = colors.vd_gray },
     PmenuSel = { fg = colors.green       , bg = colors.vd_gray , style = colors.underline },
 
@@ -148,7 +149,6 @@ function M.setup()
 -- Repeat         xxx links to Statement
 -- Label          xxx links to Statement
 -- Keyword        xxx links to Statement
--- Exception      xxx links to Statement
 -- Define         xxx links to PreProc
 -- Macro          xxx links to PreProc
 -- PreCondit      xxx links to PreProc

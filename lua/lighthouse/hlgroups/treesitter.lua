@@ -4,48 +4,56 @@ function M.mapping()
   local config = require("lighthouse").config
   local colors = config.colors
 
-  local mapping = {
-    TSType = { fg = colors.orange }, -- 定数
-    TSVariableBuiltin = { fg = colors.orange }, -- self
-    TSParameter = { fg = colors.l_blue }, -- 引数
-    TSConstant = { fg = colors.jade }, -- 定義
-    TSLabel = { fg = colors.yellow }, -- インスタンス変数?(ruby)
-    TSPunctBracket = { fg = colors.m_gray }, -- カッコ
-    TSConstructor = { fg = colors.m_gray }, -- 構造のカッコ
-    TSStringRegex = { fg = colors.purple }, -- regexpの中身
-  }
+  local mapping = {}
+  mapping['@parameter'] = { fg = colors.blue } -- 引数
+  -- mapping['@constant'] = { fg = colors.jade } -- 定義
+  mapping['@label'] = { fg = colors.yellow } -- インスタンス変数?(ruby)
+  mapping['@variable.global'] = { fg = colors.yellow } -- グローバル変数(ruby)
+
+  mapping['@punctuation.bracket'] = { fg = colors.m_gray } -- カッコ
+  mapping['@constructor'] = { fg = colors.m_gray } -- 構造のカッコ
+  mapping['@variable.builtin'] = { fg = colors.orange } -- self
+  mapping['@type'] = { fg = colors.l_purple } -- 定数
+  mapping['@string.regex'] = { fg = colors.purple } -- regexpの中身
+  mapping['@function.call'] = { fg = colors.l_orange }
+
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
     Normal = {
-      "TSVariable", -- 変数
-      "TSFunction", -- メソッド
-      "TSOperator", -- 演算子
-      "TSPunctDelimiter" -- 区切り
+      "@variable", -- 変数
+      "@operator", -- 演算子
+      "@punctuation.delimiter", -- 区切り
+      "@symbol"
     },
-    -- 文字列
-    String = { "TSString" },
-    -- コメント
-    Comment = { "TSComment" },
-    -- 条件式
-    Conditional = { "TSConditional" },
-    -- catchなどの例外処理
-    Exception = { "TSException" },
+    Function = {
+      "@function", -- メソッド
+    },
+    -- -- 文字列
+    String = { "@string" },
+    -- -- コメント
+    Comment = { "@comment" },
+    -- -- 条件式
+    Conditional = { "@conditional" },
+    -- -- catchなどの例外処理
+    Exception = {
+      "@exception",
+      -- return
+      "@keyword.return"
+    },
     Keyword = {
       -- module class defなどの言語の予約語
-      "TSKeyword",
+      "@keyword",
       -- functionなどの言語の予約語
-      "TSKeywordFunction",
+      "@keyword.function",
     },
-    Number = { "TSNumber" },
-    Boolean = { "TSBoolean" },
-    Float = { "TSFloat" },
+    Number = { "@number" },
+    Boolean = { "@boolean" },
+    Float = { "@float" },
     Identifier = {
       -- 構造体のフィールド
-      "TSField",
-      -- return
-      "TSKeywordReturn"
+      "@field",
     },
-    Todo = { "TSTodo" },
-    Include = { "TSInclude" },
+    Todo = { "@todo" },
+    Include = { "@include" },
   })
 
 -- 謎な者たち
