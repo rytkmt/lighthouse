@@ -9,11 +9,13 @@ function M.mapping()
     tomlComment = { link = "_Comment" },
     tomlTableArray = { fg = colors.l_blue },
     tomlLabel = { fg = colors.purple },
+    tomlFloat = { link = "_Value" },
+    tomlInteger = { link = "_Value" },
   }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
     _Unknown = {
-      "tomlEscape", "tomlLineEscape", "tomlInteger", "tomlFloat", "tomlBoolean", "tomlDate", "tomlTable", "tomlTodo",
+      "tomlEscape", "tomlLineEscape", "tomlBoolean", "tomlDate", "tomlTable", "tomlTodo",
     }
   })
 

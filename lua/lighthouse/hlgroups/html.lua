@@ -5,11 +5,6 @@ function M.mapping()
   local colors = config.colors
 
   local mapping = {
-    -- -------------- d_gray --------------
-    htmlH1 = { bg = colors.red , fg = colors.d_gray },
-    htmlH3 = { bg = colors.orange , fg = colors.d_gray },
-    htmlH5 = { bg = colors.yellow , fg = colors.d_gray },
-
     -- -------------- l_purple --------------
     htmlEventDQ = { fg = colors.l_purple },
 
@@ -30,6 +25,7 @@ function M.mapping()
     htmlSpecialChar = { fg = colors.green },
 
     -- -------------- yellow --------------
+    htmlH5 = { fg = colors.yellow , style = colors.bold },
     htmlH6 = { fg = colors.yellow },
 
     -- ------------- orange -----------------
@@ -37,9 +33,11 @@ function M.mapping()
     htmlTagName = { fg = colors.orange },
     -- <script> </script> <-- script
     htmlSpecialTagName = { fg = colors.orange },
+    htmlH3 = { fg = colors.orange , style = colors.bold },
     htmlH4 = { fg = colors.orange },
 
     -- ------------- red -----------------
+    htmlH1 = { fg = colors.red , style = colors.bold_underline },
     htmlH2 = { fg = colors.red , style = colors.underline },
   }
 
