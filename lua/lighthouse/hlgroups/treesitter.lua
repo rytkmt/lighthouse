@@ -16,6 +16,12 @@ function M.mapping()
   mapping['@type'] = { fg = colors.l_purple } -- 定数
   mapping['@string.regex'] = { fg = colors.purple } -- regexpの中身
   mapping['@function.call'] = { fg = colors.l_orange }
+  mapping['@text.title.1'] = { fg = colors.orange, style = colors.bold }
+  mapping['@text.title.2'] = { fg = colors.l_blue, style = colors.underline }
+  mapping['@text.title.3'] = { fg = colors.l_green, style = colors.underline }
+  mapping['@text.title.4'] = { fg = colors.jade }
+  mapping['@text.title.5'] = { fg = colors.green }
+  mapping['@text.title.6'] = { fg = colors.blue }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
     Normal = {
