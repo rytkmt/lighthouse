@@ -76,6 +76,7 @@ function M.setup()
     Pmenu = { fg = colors.red       , bg = colors.vd_gray },
     PmenuSel = { fg = colors.green       , bg = colors.vd_gray , style = colors.underline },
 
+    QuickFixLine = { fg = colors.orange, style = colors.underline },
     StatusLine = {  style = colors.reverse , bg = "#17171b" , fg = "#818596" },
     StatusLineTerm = {  style = colors.reverse , bg = "#17171b" , fg = "#818596" },
     StatusLineNC = {  style = colors.reverse , bg = "#3e445e" , fg = "#0f1117" },
@@ -131,7 +132,6 @@ function M.setup()
 --                    links to Unknown
 -- PmenuThumb     xxx ctermbg=15 guibg=White
 --                    links to Unknown
--- QuickFixLine   xxx links to Search
 -- Whitespace     xxx links to NonText
 -- NormalNC       xxx cleared
 -- MsgSeparator   xxx links to StatusLine
