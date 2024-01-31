@@ -22,12 +22,29 @@ function M.mapping()
   mapping['@text.title.4'] = { fg = colors.jade }
   mapping['@text.title.5'] = { fg = colors.green }
   mapping['@text.title.6'] = { fg = colors.blue }
+  mapping['@markup.heading.1'] = { fg = colors.orange, style = colors.bold }
+  mapping['@markup.heading.2'] = { fg = colors.l_blue, style = colors.underline }
+  mapping['@markup.heading.3'] = { fg = colors.l_green, style = colors.underline }
+  mapping['@markup.heading.4'] = { fg = colors.jade }
+  mapping['@markup.heading.5'] = { fg = colors.green }
+  mapping['@markup.heading.6'] = { fg = colors.blue }
+  mapping['@markup.list'] = { fg = colors.yellow }
+  mapping['@markup.link'] = { fg = colors.l_gray }
+  mapping['@markup.link.url'] = { fg = colors.l_purple }
+  mapping['@markup.link.label'] = { fg = colors.l_orange }
+  mapping['@markup.raw.delimiter'] = { fg = colors.m_gray }
+  mapping['@markup.raw'] = { fg = colors.l_orange }
+  mapping['@markup.italic'] = { style = colors.underline }
+  mapping['@markup.strong'] = { style = colors.bold }
+  mapping['@markup.strikethrough'] = { fg = colors.d_gray }
+  mapping['@markup.heading'] = { fg = colors.l_blue }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
     Normal = {
       "@variable", -- 変数
       "@operator", -- 演算子
       "@punctuation.delimiter", -- 区切り
+      "@string.special.symbol",
       "@symbol"
     },
     Function = {
