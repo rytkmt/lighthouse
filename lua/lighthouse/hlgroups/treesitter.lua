@@ -7,8 +7,9 @@ function M.mapping()
   local mapping = {}
   mapping['@parameter'] = { fg = colors.blue } -- 引数
   -- mapping['@constant'] = { fg = colors.jade } -- 定義
-  mapping['@label'] = { fg = colors.yellow } -- インスタンス変数?(ruby)
+  mapping['@label'] = { fg = colors.yellow } -- ??
   mapping['@variable.global'] = { fg = colors.yellow } -- グローバル変数(ruby)
+  mapping['@variable.member'] = { fg = colors.green } -- キー(lua)
 
   mapping['@punctuation.bracket'] = { fg = colors.m_gray } -- カッコ
   mapping['@constructor'] = { fg = colors.m_gray } -- 構造のカッコ
@@ -124,6 +125,12 @@ function M.mapping()
 -- TSTag          xxx links to Label
 -- TSTagDelimiter xxx links to Delimiter
 -- TSTagAttribute xxx links to TSProperty
+
+  mapping = vim.tbl_extend(
+    "force",
+    mapping,
+    require("lighthouse.hlgroups.treesitter.ruby").mapping()
+  )
   return mapping
 end
 
