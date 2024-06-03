@@ -72,7 +72,8 @@ function M.setup()
     diffRemoved = {  fg = colors.red, bg = "#302020" },
     diffChanged = {  fg = colors.yellow },
     Directory = { fg = colors.blue },
-    Folded = { fg = colors.jade , bg = colors.vd_gray },
+    -- Folded = { fg = colors.jade , bg = colors.vd_gray },
+    Folded = { fg = "#b8b8cf", bg = "#4a3b5e" },
     Pmenu = { fg = colors.red       , bg = colors.vd_gray },
     PmenuSel = { fg = colors.green       , bg = colors.vd_gray , style = colors.underline },
 
