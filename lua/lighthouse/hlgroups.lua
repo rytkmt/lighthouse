@@ -109,7 +109,8 @@ function M.setup()
     require("lighthouse.hlgroups.markdown").mapping(),
     require("lighthouse.hlgroups.toml").mapping(),
     require("lighthouse.hlgroups.syntastic").mapping(),
-    require("lighthouse.hlgroups.telescope").mapping()
+    require("lighthouse.hlgroups.telescope").mapping(),
+    require("lighthouse.hlgroups.nvim-cmp").mapping()
   )
 
   local link_mapping = {
