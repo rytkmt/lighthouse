@@ -22,6 +22,7 @@ function M.setup()
     _Regexp = { link = "_String" },
     _Note = { fg = colors.yellow },
     _Error = { fg = colors.red },
+    _URL = { fg = colors.l_purple },
     _Unknown = {  bg = "#990000" },
     _Unknown2 = {  bg = "#eeee00" },
     -- }}}

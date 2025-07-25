@@ -9,9 +9,7 @@ function M.mapping()
     mkdBold = { fg = colors.purple , style = colors.bold },
     mkdBoldItalic = { fg = colors.purple , style = colors.bold_italic },
 
-    mkdInlineURL = { fg = colors.l_purple },
     mkdLinkDefTarget = { fg = colors.l_purple },
-    mkdURL = { fg = colors.l_purple },
 
     mkdLinkDelimiter = { fg = colors.l_blue },
     mkdFootnotesDelimiter = { fg = colors.l_blue },
@@ -47,8 +45,14 @@ function M.mapping()
     _Comment = {
       "mkdBlockquote",
     },
-    _Unknown = {
-      "markdownUrl", "mkdIndentCode0", "mkdIndentCode1", "mkdIndentCode2", "mkdFrontmatterDelimiter", "mkdString", "mkdMath", "mkdURLDelimiter"
+    _Unknown2 = {
+      "mkdIndentCode0", "mkdIndentCode1", "mkdIndentCode2", "mkdFrontmatterDelimiter", "mkdString", "mkdMath", "mkdURLDelimiter"
+    },
+    _URL = {
+      "mkdInlineURL",
+      "mkdURL",
+      -- LSPでのdefinitionの遷移先の説明で利用
+      "markdownUrl"
     }
   })
 

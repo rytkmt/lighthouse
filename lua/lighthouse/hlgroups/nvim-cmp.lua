@@ -8,7 +8,8 @@ function M.mapping()
     CmpItemAbbr = { fg = colors.white },
     CmpItemAbbrMatch = { fg = colors.l_red },
     CmpItemKind = { fg = colors.green },
-    CmpItemKindSnippet = { fg = colors.purple }
+    CmpItemKindSnippet = { fg = colors.purple },
+    CmpItemMenu = { fg = colors.l_purple }
   }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
