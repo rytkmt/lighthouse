@@ -6,14 +6,19 @@
 - fuga `hoge` xx
 
 1. a
-  1. hoge
-  2. fuga
-  2. fuga
-2. b
-3. c
+    1. hoge
+    2. fuga
+    3. fuga
+1. b
+1. c
 
 1\.数字リスト対策のエスケープ
 
+```diff
++ 111
++ xxxy
+- xxx
+```
 
 ## h2
 
@@ -22,7 +27,13 @@
     ここからコメント
 
 ```ruby
-def ruby
+class Hoge
+  module X
+    class << self
+      def hoge(x: 1, **options)
+      end
+  end
+end
 ```
 
 ### h3
