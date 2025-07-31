@@ -8,7 +8,7 @@
 1. a
     1. hoge
     2. fuga
-    3. fuga
+    1. fuga
 1. b
 1. c
 
@@ -62,6 +62,7 @@ end
 | be         |          be |      be      |
 | left       |       right |    center    |
 | aligned    |     aligned |   aligned    |
+
 
 ###### h6
 
