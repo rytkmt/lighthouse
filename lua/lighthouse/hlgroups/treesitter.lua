@@ -23,12 +23,12 @@ function M.mapping()
   mapping['@text.title.4'] = { fg = colors.jade }
   mapping['@text.title.5'] = { fg = colors.green }
   mapping['@text.title.6'] = { fg = colors.blue }
-  mapping['@markup.heading.1'] = { fg = colors.orange, style = colors.bold }
-  mapping['@markup.heading.2'] = { fg = colors.l_blue, style = colors.underline }
-  mapping['@markup.heading.3'] = { fg = colors.l_green, style = colors.underline }
-  mapping['@markup.heading.4'] = { fg = colors.jade }
-  mapping['@markup.heading.5'] = { fg = colors.green }
-  mapping['@markup.heading.6'] = { fg = colors.blue }
+  mapping['@markup.heading.1'] = { fg = "#efefe8", bg = "#4a2422", style = colors.bold_underline }
+  mapping['@markup.heading.2'] = { fg = "#efefe8", bg = "#483428", style = colors.underline }
+  mapping['@markup.heading.3'] = { fg = "#efefe8", bg = "#403f22", style = colors.underline }
+  mapping['@markup.heading.4'] = { fg = "#efefe8", bg = "#304022" }
+  mapping['@markup.heading.5'] = { fg = "#efefe8", bg = "#30304f" }
+  mapping['@markup.heading.6'] = { fg = "#efefe8", bg = "#322848" }
   mapping['@markup.list'] = { fg = colors.yellow }
   mapping['@markup.link'] = { fg = colors.l_gray }
   mapping['@markup.link.url'] = { fg = colors.l_purple }
