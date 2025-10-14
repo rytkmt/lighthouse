@@ -7,7 +7,7 @@ function M.setup()
     vd_gray   = "#293037",
     d_gray    = "#515960",
     m_gray    = "#a4a4b2",
-    l_gray    = "#747480",
+    l_gray    = "#8a8a96",
     white     = "#d8d8e8",
     purple    = "#7f63a8",
     l_purple  = "#8284ba",

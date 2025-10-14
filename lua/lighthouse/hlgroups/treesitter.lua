@@ -23,12 +23,19 @@ function M.mapping()
   mapping['@text.title.4'] = { fg = colors.jade }
   mapping['@text.title.5'] = { fg = colors.green }
   mapping['@text.title.6'] = { fg = colors.blue }
-  mapping['@markup.heading.1'] = { fg = "#efefe8", bg = "#4a2422", style = colors.bold_underline }
-  mapping['@markup.heading.2'] = { fg = "#efefe8", bg = "#483428", style = colors.underline }
-  mapping['@markup.heading.3'] = { fg = "#efefe8", bg = "#403f22", style = colors.underline }
-  mapping['@markup.heading.4'] = { fg = "#efefe8", bg = "#304022" }
-  mapping['@markup.heading.5'] = { fg = "#efefe8", bg = "#30304f" }
-  mapping['@markup.heading.6'] = { fg = "#efefe8", bg = "#322848" }
+  -- mapping['@markup.heading.1'] = { fg = "#e0dcd7", bg = "#6a2822", style = colors.bold_underline }
+  -- mapping['@markup.heading.2'] = { fg = "#f0e8d7", bg = "#684624", style = colors.underline }
+  -- mapping['@markup.heading.3'] = { fg = "#e8f0dd", bg = "#7f7f30", style = colors.underline }
+  -- mapping['@markup.heading.4'] = { fg = "#ddeecb", bg = "#304022" }
+  -- mapping['@markup.heading.5'] = { fg = "#deebfb", bg = "#30304f" }
+  -- mapping['@markup.heading.6'] = { fg = "#eedfff", bg = "#322848" }
+  mapping['@markup.heading.1'] = { fg = "#FFDBA7", bg = "#702A00", style = colors.bold_underline }
+  mapping['@markup.heading.2'] = { fg = "#E1D5A4", bg = "#5A4B1A", style = colors.underline }
+  mapping['@markup.heading.3'] = { fg = "#B7D2AE", bg = "#2D4829", style = colors.underline }
+  mapping['@markup.heading.4'] = { fg = "#91C8C8", bg = "#1A4B4B" }
+  mapping['@markup.heading.5'] = { fg = "#84B0C7", bg = "#1A3245" }
+  mapping['@markup.heading.6'] = { fg = "#B9B6C8", bg = "#3a2f46" }
+
   mapping['@markup.list'] = { fg = colors.yellow }
   mapping['@markup.link'] = { fg = colors.l_gray }
   mapping['@markup.link.url'] = { fg = colors.l_purple }

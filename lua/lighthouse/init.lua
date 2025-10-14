@@ -14,7 +14,8 @@ local function set_highlights()
         local bg = color.bg and "guibg=" .. color.bg .. " " or ""
         local style = color.style and "gui=" .. color.style .. " " or ""
         local guisp = color.guisp and "guisp=" .. color.guisp .. " " or ""
-        vim.cmd("hi " .. group .. " " .. fg .. bg .. style .. guisp)
+        local cterm = color.cterm and "cterm=" .. color.cterm .. " " or ""
+        vim.cmd("hi " .. group .. " " .. fg .. bg .. style .. guisp .. cterm)
       end
     end
   end

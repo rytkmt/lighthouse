@@ -79,8 +79,7 @@ function M.setup()
     PmenuSel = { fg = colors.green       , bg = colors.vd_gray , style = colors.underline },
 
     QuickFixLine = { fg = colors.orange, style = colors.underline },
-    StatusLine = { bg = "#818596" , fg = "#17171b" },
-    StatusLineTerm = { bg = "#818596" , fg = "#17171b" },
+    StatusLine = { bg = "#17171b" , fg = "#818596", cterm = colors.none },
     StatusLineNC = { bg = "#0f1117" , fg = "#3e445e" },
     StatusLineTermNC = { bg = "#0f1117" , fg = "#3e445e" },
     StatusLineTerm = { bg = "#818596" , fg = "#17171b" },
