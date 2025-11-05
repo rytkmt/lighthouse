@@ -2,7 +2,7 @@ local M = {}
 
 function M.link_hlgroups(hash, link_mapping)
   for link_name,vs in pairs(link_mapping) do
-    for i,v in pairs(vs) do
+    for _, v in pairs(vs) do
       hash[v] = { link = link_name }
     end
   end
@@ -89,6 +89,8 @@ function M.setup()
     FloatBorder = { bg = colors.black, fg = "#b0b4c8" },
     NormalFloat = { bg = colors.black, fg = "#b0b4c8" },
     WildMenu = { bg = colors.m_gray , fg = colors.black },
+    WinBar = { fg = "#d8d8e8", cterm = colors.none, style = colors.none  },
+    WinBarNC = { fg = "#616570", cterm = colors.none, style = colors.none  },
 
     ColorColumn = {  bg = "#282840" },
 
