@@ -37,6 +37,7 @@ function M.mapping()
   mapping['@markup.heading.6'] = { fg = "#B9B6C8", bg = "#3a2f46" }
 
   mapping['@markup.list'] = { fg = colors.yellow }
+  -- mapping['@markup.list.checked'] = { fg = colors.red }
   mapping['@markup.link'] = { fg = colors.l_gray }
   mapping['@markup.link.url'] = { fg = colors.l_purple }
   mapping['@markup.link.label'] = { fg = colors.l_orange }

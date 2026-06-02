@@ -11,11 +11,12 @@ function M.mapping()
     tomlLabel = { fg = colors.purple },
     tomlFloat = { link = "_Value" },
     tomlInteger = { link = "_Value" },
+    tomlTable = { fg = colors.l_blue }
   }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
     _Unknown = {
-      "tomlEscape", "tomlLineEscape", "tomlBoolean", "tomlDate", "tomlTable", "tomlTodo",
+      "tomlEscape", "tomlLineEscape", "tomlBoolean", "tomlDate", "tomlTodo",
     }
   })
 
