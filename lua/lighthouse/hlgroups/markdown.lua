@@ -30,6 +30,7 @@ function M.mapping()
     mkdLineBreak = { bg = colors.yellow },
     mkdRule = {  style = colors.reverse },
   }
+  mapping['@markup.strong.markdown_inline'] = { fg = colors.l_red, style = colors.bold }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
     Normal = {
