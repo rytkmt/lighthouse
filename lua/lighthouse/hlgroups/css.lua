@@ -11,54 +11,6 @@ function M.mapping()
     -- "---------- blue ------------"
     -- -moz- -webkit- "
     cssVendor = { fg = colors.blue },
-    -- animation-name animation-duration "
-    cssAnimationProp = { fg = colors.blue },
-    -- content "
-    cssPageProp = { fg = colors.blue },
-    -- background background-color "
-    cssBackgroundProp = { fg = colors.blue },
-    -- border border-color "
-    cssBorderProp = { fg = colors.blue },
-    -- margin padding margin-right "
-    cssBoxProp = { fg = colors.blue },
-    -- opacity "
-    cssColorProp = { fg = colors.blue },
-    -- width height "
-    cssDimensionProp = { fg = colors.blue },
-    -- font-size font-family "
-    cssFontProp = { fg = colors.blue },
-    -- page-break-before: always <-- page-break-before "
-    cssMultiColumnProp = { fg = colors.blue },
-    -- font-family: myFont; src:url(some); <-- font-family src "
-    cssFontDescriptorProp = { fg = colors.blue },
-    -- counter-increment: popular_img; "
-    cssGeneratedContentProp = { fg = colors.blue },
-    -- target-new:none; <-- target_new "
-    cssHyerlinkProp = { fg = colors.blue },
-    -- list-style-type:none; <-- list-style-type "
-    cssListProp = { fg = colors.blue },
-    -- display: float: left: top: position: <-- :以外"
-    cssPositioningProp = { fg = colors.blue },
-    -- table-layout:auto; <-- table-layout"
-    cssTableProp = { fg = colors.blue },
-    -- line-height:2; color:red; <-- line-height color "
-    cssTextProp = { fg = colors.blue },
-    -- transform: scale(1.5); <-- transform "
-    cssTransformProp = { fg = colors.blue },
-    -- transition: some; transition-property:some <-- transition transition-property "
-    cssTransitionProp = { fg = colors.blue },
-    -- box-sizing: some; cursor: some; <-- box-sizing cursor "
-    cssUIProp = { fg = colors.blue },
-    -- zoom: some; interpolation-mode: some; filter: some <-- zoom inter@olation-mode filter "
-    cssIEUIProp = { fg = colors.blue },
-    -- pitch: some; <-- pitch "
-    cssAuralProp = { fg = colors.blue },
-    -- text-size-adjust: some; <-- text-size-adjust "
-    cssMobileTextProp = { fg = colors.blue },
-    -- box-shadow: some <-- box-shadow "
-    cssFlexibleBoxProp = { fg = colors.blue },
-    -- @media screen{ min-color: some} <-- min-color "
-    cssMediaProp = { fg = colors.blue },
     -- "------------ l_blue --------------"
     -- @charset "
     cssIncludeKeyword = { fg = colors.l_blue },
@@ -88,6 +40,58 @@ function M.mapping()
   }
 
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
+    Type = {
+      -- gap: 24px; <-- gap
+      "cssGridProp",
+      -- animation-name animation-duration "
+      "cssAnimationProp",
+      -- content "
+      "cssPageProp",
+      -- background background-color "
+      "cssBackgroundProp",
+      -- border border-color "
+      "cssBorderProp",
+      -- margin padding margin-right "
+      "cssBoxProp",
+      -- opacity "
+      "cssColorProp",
+      -- width height "
+      "cssDimensionProp",
+      -- font-size font-family "
+      "cssFontProp",
+      -- page-break-before: always <-- page-break-before "
+      "cssMultiColumnProp",
+      -- font-family: myFont; src:url(some); <-- font-family src "
+      "cssFontDescriptorProp",
+      -- counter-increment: popular_img; "
+      "cssGeneratedContentProp",
+      -- target-new:none; <-- target_new "
+      "cssHyerlinkProp",
+      -- list-style-type:none; <-- list-style-type "
+      "cssListProp",
+      -- display: float: left: top: position: <-- :以外"
+      "cssPositioningProp",
+      -- table-layout:auto; <-- table-layout"
+      "cssTableProp",
+      -- line-height:2; color:red; <-- line-height color "
+      "cssTextProp",
+      -- transform: scale(1.5); <-- transform "
+      "cssTransformProp",
+      -- transition: some; transition-property:some <-- transition transition-property "
+      "cssTransitionProp",
+      -- box-sizing: some; cursor: some; <-- box-sizing cursor "
+      "cssUIProp",
+      -- zoom: some; interpolation-mode: some; filter: some <-- zoom inter@olation-mode filter "
+      "cssIEUIProp",
+      -- pitch: some; <-- pitch "
+      "cssAuralProp",
+      -- text-size-adjust: some; <-- text-size-adjust "
+      "cssMobileTextProp",
+      -- box-shadow: some <-- box-shadow "
+      "cssFlexibleBoxProp",
+      -- @media screen{ min-color: some} <-- min-color "
+      "cssMediaProp",
+    },
     Normal = {
       "cssStyle",
       -- propety: some; <-- : ;"
@@ -180,6 +184,8 @@ function M.mapping()
       "cssFontDescriptorFunction",
       -- unicode-range: U+000-5FF, U+1e00-1fff, U+2000-2300;"
       "cssFontDescriptorAttr",
+      -- display: flex <-- flex
+      "cssFlexibleBoxAttr",
     },
     _String = {
       -- content: "\2193"; <-- \2193
@@ -200,7 +206,7 @@ function M.mapping()
     _Unknown = {
       "cssMediaBlock", "cssError", "cssDefinition", "cssPageWrap", "cssPage",
       "cssPageMargin", "cssKeyFrameWrap", "cssKeyFrame", "cssFontDescriptorBlock",
-      "cssFlexibleBoxAttr", "cssGridProp", "cssBraceError", "cssDeprecated", "cssProp",
+      "cssBraceError", "cssDeprecated", "cssProp",
       "cssContentForPagedMediaProp", "cssMarqueeProp", "cssPagedMediaProp", "cssRubyProp",
       "cssSpeechProp", "cssRenderProp", "cssAttr", "cssContentForPagedMediaAttr", "cssDimensionAttr",
       "cssGridAttr", "cssHyerlinkAttr", "cssLineboxAttr", "cssMarginAttr", "cssMarqueeAttr",
