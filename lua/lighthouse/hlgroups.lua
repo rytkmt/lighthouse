@@ -105,6 +105,8 @@ function M.setup()
     require("lighthouse.hlgroups.css").mapping(),
     require("lighthouse.hlgroups.ruby").mapping(),
     require("lighthouse.hlgroups.javascript").mapping(),
+    require("lighthouse.hlgroups.jsx").mapping(),
+    require("lighthouse.hlgroups.tsx").mapping(),
     require("lighthouse.hlgroups.html").mapping(),
     require("lighthouse.hlgroups.yaml").mapping(),
     require("lighthouse.hlgroups.defx").mapping(),

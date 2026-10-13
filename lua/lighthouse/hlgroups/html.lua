@@ -41,6 +41,10 @@ function M.mapping()
     htmlH2 = { fg = colors.red , style = colors.underline },
   }
 
+  mapping["@tag.html"] = { fg = colors.l_orange }
+  mapping["@tag.attribute.html"] = { fg = colors.green }
+  mapping["@tag.delimiter.html"] = { fg = colors.l_blue }
+
   require("lighthouse.hlgroups").link_hlgroups(mapping, {
     Normal = {
       -- onclick="method(aa,bb)" <-- onclick="method ,
